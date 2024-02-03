@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: certus-redis-cache
+#  redis:
+#    host: 172.18.0.2
+
+server:
+  port: 9095
+
+eureka:
+  client:
+    enabled: true
+    healthcheck:
+      enabled: true
+    registerWithEureka: true
+    fetchRegistry: true
+    service-url:
+      defaultZone: http://localhost:9761/eureka/
+  server:
+    enable-self-preservation: false
+    peer-node-read-timeout-ms: 10000000
